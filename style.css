@@ -11,7 +11,7 @@ button {
 }
 
 body {
-  width: 100vw;
+  width: calc(100vw - (100vw - 100%));
   font-family: "Josefin Sans", sans-serif;
   background-color: #18181D;
 }
@@ -22,10 +22,6 @@ main {
   color: #e4e4e4;
 }
 
-h2 {
-  font-size: 16px;
-}
-
 .head-bar {
   width: 100%;
   position: sticky;
@@ -33,7 +29,7 @@ h2 {
   z-index: 9999999;
   padding: 16px;
   background-color: #18181D;
-  border: 2px solid #141419;
+  border-bottom: 2px solid #141419;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,10 +51,10 @@ h2 {
   gap: 32px;
   padding: 0 16px 16px 16px;
 }
-#content .inner {
+#content .content-inner {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 60px;
   padding: 16px;
   background-color: #141419;
   border-radius: 12px;
@@ -92,13 +88,14 @@ h2 {
 .atrs-sec {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 28px;
 }
 .atrs-sec .atrs-sec-title {
   display: grid;
   grid-template-columns: auto fit-content(200px) auto;
   align-items: center;
   gap: 12px;
+  font-size: 16px;
 }
 .atrs-sec .atrs-sec-title::after, .atrs-sec .atrs-sec-title::before {
   content: "";
@@ -120,13 +117,14 @@ h2 {
 }
 
 .fx-atr-card {
-  background: hsl(240, 10%, 7.6%);
+  background: rgb(14.7622641509, 14.7622641509, 17.8377358491);
   border-radius: 12px;
   overflow: hidden;
 }
 .fx-atr-card .fx-atr-title {
   background: rgb(14.7622641509, 14.7622641509, 17.8377358491);
   padding: 20px 32px;
+  border-bottom: 2px solid #141419;
 }
 .fx-atr-card .fx-atrs-sec {
   display: grid;
@@ -163,25 +161,27 @@ h2 {
   place-items: center;
 }
 
-.menu {
+.select-container {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;
+  z-index: 999999;
   width: 100vw;
   height: 100vh;
-  padding: 40px 16px 0 16px;
   background-color: #18181D;
   display: flex;
   flex-direction: column;
   display: none;
 }
-.menu .select {
+.select-container .sc-inner {
+  margin: 40px 16px;
+}
+.select-container .select {
   width: 100%;
   padding-bottom: 132px;
   overflow-y: scroll;
 }
-.menu .select .armor-list {
+.select-container .select .armor-list {
   list-style-type: none;
   padding: 0;
   width: inherit;
@@ -190,7 +190,7 @@ h2 {
   flex-direction: column;
   gap: 32px;
 }
-.menu .select .armor-list .an-armor {
+.select-container .select .armor-list .an-armor {
   overflow: hidden;
   width: inherit;
   display: grid;
@@ -200,24 +200,24 @@ h2 {
   background-color: #141419;
   border-radius: 16px;
 }
-.menu .select .armor-list .an-armor.active {
+.select-container .select .armor-list .an-armor.active {
   background-color: hsl(240, 10%, 7.6%);
   border: 2px solid #DD7600;
 }
-.menu .select .armor-list .an-armor.active .img-container {
+.select-container .select .armor-list .an-armor.active .img-container {
   filter: grayscale(0);
 }
-.menu .select .armor-list .an-armor.active .txt-container {
+.select-container .select .armor-list .an-armor.active .txt-container {
   color: #e4e4e4;
 }
-.menu .select .armor-list .an-armor .img-container {
+.select-container .select .armor-list .an-armor .img-container {
   height: 100%;
   filter: grayscale(1);
 }
-.menu .select .armor-list .an-armor .img-container img {
+.select-container .select .armor-list .an-armor .img-container img {
   height: 100%;
 }
-.menu .select .armor-list .an-armor .txt-container {
+.select-container .select .armor-list .an-armor .txt-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -225,10 +225,10 @@ h2 {
   padding: 20px 16px;
   color: rgb(138.75, 138.75, 138.75);
 }
-.menu .select .armor-list .an-armor .txt-container .armor-name {
+.select-container .select .armor-list .an-armor .txt-container .armor-name {
   font-size: 20px;
 }
-.menu .select .armor-list .an-armor .txt-container .weight-info {
+.select-container .select .armor-list .an-armor .txt-container .weight-info {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -236,7 +236,7 @@ h2 {
   font-family: "Ubuntu Mono", monospace;
   color: rgb(138.75, 138.75, 138.75);
 }
-.menu .menu-options {
+.select-container .menu-options {
   position: absolute;
   bottom: 40px;
   display: flex;
@@ -244,7 +244,7 @@ h2 {
   align-items: center;
   gap: 8px;
 }
-.menu .menu-options .btn-group {
+.select-container .menu-options .btn-group {
   display: grid;
   grid-template: 55px/repeat(4, 55px);
   overflow: hidden;
@@ -252,7 +252,7 @@ h2 {
   border-radius: 12px;
   background-color: black;
 }
-.menu .menu-options .btn-group button {
+.select-container .menu-options .btn-group button {
   margin: 7.5px;
   display: grid;
   place-items: center;
@@ -260,9 +260,9 @@ h2 {
   color: #e4e4e4;
   border-radius: 6px;
 }
-.menu .menu-options .btn-group button.active {
+.select-container .menu-options .btn-group button.active {
   background-color: #FFA600;
 }
-.menu .menu-options .btn-group button:hover {
+.select-container .menu-options .btn-group button:hover {
   background-color: rgb(56, 56, 56);
 }/*# sourceMappingURL=style.css.map */
