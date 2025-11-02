@@ -1,2 +1,2 @@
-# Khazan_Tool
-A tool for the game The First Berserker Khazan, that provides details on Legendary Sets
+# Khazan Tool
+A simple tool that shows data on the Legendary Sets that are available in the game "The First Berserker: Khazan". 
