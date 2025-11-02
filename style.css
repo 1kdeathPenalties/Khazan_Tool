@@ -19,8 +19,6 @@ body {
 main {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
   color: #e4e4e4;
 }
 
@@ -30,14 +28,15 @@ h2 {
 
 .head-bar {
   width: 100%;
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #141419;
   position: sticky;
   top: 0;
   z-index: 9999999;
+  padding: 16px;
+  background-color: #18181D;
+  border: 2px solid #141419;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .head-bar .hamburger {
   aspect-ratio: 1/1;
@@ -53,8 +52,41 @@ h2 {
 #content {
   display: flex;
   flex-direction: column;
+  gap: 32px;
+  padding: 0 16px 16px 16px;
+}
+#content .inner {
+  display: flex;
+  flex-direction: column;
   gap: 40px;
-  padding: 32px 16px;
+  padding: 16px;
+  background-color: #141419;
+  border-radius: 12px;
+}
+#content .pg-about {
+  background: #18181D;
+  padding: 16px 0;
+  font-size: 18px;
+  font-weight: 300;
+  text-decoration: underline;
+}
+#content .armor-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+#content .armor-info .armor-name {
+  font-weight: 500;
+  font-size: 24px;
+}
+#content .armor-info .weight-info {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 4px;
+  font-size: 16px;
+  font-family: "Ubuntu Mono", monospace;
 }
 
 .atrs-sec {
@@ -88,12 +120,12 @@ h2 {
 }
 
 .fx-atr-card {
-  background: #141419;
+  background: hsl(240, 10%, 7.6%);
   border-radius: 12px;
   overflow: hidden;
 }
 .fx-atr-card .fx-atr-title {
-  background: hsl(240, 10%, 7.6%);
+  background: rgb(14.7622641509, 14.7622641509, 17.8377358491);
   padding: 20px 32px;
 }
 .fx-atr-card .fx-atrs-sec {
@@ -126,7 +158,7 @@ h2 {
   width: 24px;
   border-radius: 4px;
   color: #e4e4e4;
-  background-color: hsl(240, 10%, 7.6%);
+  background-color: black;
   display: grid;
   place-items: center;
 }
