@@ -15,7 +15,7 @@ body {
   height: 100vh;
   font-family: "Josefin Sans", sans-serif;
   background-color: #18181D;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 
 main {
@@ -24,7 +24,6 @@ main {
   display: flex;
   flex-direction: column;
   color: #e4e4e4;
-  overflow-y: scroll;
 }
 
 h2 {
