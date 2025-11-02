@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-optical-sizing: auto;
+}
+
+button {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+body, main {
+  width: 100%;
+  height: 100%;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #18181D;
+}
+
+main {
+  padding: 40px 16px;
+  display: flex;
+  flex-direction: column;
+  color: #e4e4e4;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 32px 0;
+}
+
+.atrs-sec {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.atrs-sec .atrs-sec-title {
+  display: grid;
+  grid-template-columns: auto fit-content(200px) auto;
+  align-items: center;
+  gap: 12px;
+}
+.atrs-sec .atrs-sec-title::after, .atrs-sec .atrs-sec-title::before {
+  content: "";
+  display: block;
+  width: 100%;
+  border-top: 1px solid #e4e4e4;
+}
+
+.fx-atr-grid-container {
+  width: 100%;
+  overflow: scroll;
+}
+.fx-atr-grid-container .fx-atr-grid {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: grid;
+  grid-template-columns: 100% 100% 100% 100% 100% 100% 100% 100%;
+  gap: 32px;
+}
+
+.fx-atr-card {
+  background: #141419;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.fx-atr-card .fx-atr-title {
+  background: hsl(240, 10%, 7.6%);
+  padding: 20px 32px;
+}
+.fx-atr-card .fx-atrs-sec {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 24px 12px;
+  padding: 24px 16px;
+}
+.fx-atr-card .fx-atrs-sec .atr-marker {
+  margin-top: 2px;
+  aspect-ratio: 1/1;
+  width: 7px;
+  rotate: 45deg;
+  background: #e4e4e4;
+}
+
+.set-atr-grid {
+  display: grid;
+  row-gap: 24px;
+}
+
+.set-atr-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+}
+.set-atr-card .marker {
+  aspect-ratio: 1/1;
+  width: 24px;
+  border-radius: 4px;
+  color: #e4e4e4;
+  background-color: hsl(240, 10%, 7.6%);
+  display: grid;
+  place-items: center;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  padding: 40px 16px 0 16px;
+  background-color: #18181D;
+  display: flex;
+  flex-direction: column;
+}
+.menu .select {
+  width: 100%;
+  padding-bottom: 132px;
+  overflow-y: scroll;
+}
+.menu .select .armor-list {
+  list-style-type: none;
+  padding: 0;
+  width: inherit;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.menu .select .armor-list .an-armor {
+  overflow: hidden;
+  width: inherit;
+  display: grid;
+  grid-template-rows: 120px;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  background-color: #141419;
+  border-radius: 16px;
+}
+.menu .select .armor-list .an-armor.active {
+  background-color: hsl(240, 10%, 7.6%);
+  border: 2px solid #DD7600;
+}
+.menu .select .armor-list .an-armor.active .img-container {
+  filter: grayscale(0);
+}
+.menu .select .armor-list .an-armor.active .txt-container {
+  color: #e4e4e4;
+}
+.menu .select .armor-list .an-armor .img-container {
+  height: 100%;
+  filter: grayscale(1);
+}
+.menu .select .armor-list .an-armor .img-container img {
+  height: 100%;
+}
+.menu .select .armor-list .an-armor .txt-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 20px 16px;
+  color: rgb(138.75, 138.75, 138.75);
+}
+.menu .select .armor-list .an-armor .txt-container .armor-name {
+  font-size: 20px;
+}
+.menu .select .armor-list .an-armor .txt-container .weight-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  font-family: "Ubuntu Mono", monospace;
+  color: rgb(138.75, 138.75, 138.75);
+}
+.menu .menu-options {
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 8px;
+}
+.menu .menu-options .btn-group {
+  display: grid;
+  grid-template: 55px/repeat(4, 55px);
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+  background-color: black;
+}
+.menu .menu-options .btn-group button {
+  margin: 7.5px;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+  color: #e4e4e4;
+  border-radius: 6px;
+}
+.menu .menu-options .btn-group button.active {
+  background-color: #FFA600;
+}
+.menu .menu-options .btn-group button:hover {
+  background-color: rgb(56, 56, 56);
+}
+.menu .menu-options .hamburger {
+  aspect-ratio: 1/1;
+  width: 60px;
+  background: #FFA600;
+  border: 3px solid #DD7600;
+  border-radius: 50%;
+}/*# sourceMappingURL=style.css.map */
