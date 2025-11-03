@@ -12,9 +12,8 @@ button {
 
 body {
   width: calc(100vw - (100vw - 100%));
-  position: fixed;
-  overflow: hidden;
-  height: 100svh;
+  overflow-y: hidden;
+  height: 100dvh;
   font-family: "Josefin Sans", sans-serif;
   background-color: #18181D;
 }
@@ -222,6 +221,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  display: none;
 }
 .select-container .select .armor-list .an-armor {
   overflow: hidden;
