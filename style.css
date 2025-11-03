@@ -166,24 +166,54 @@ main {
   top: 0;
   left: 0;
   z-index: 999999;
-  width: 100vw;
+  width: calc(100vw - (100vw - 100%));
   height: 100vh;
+  padding: 92px 0 0 0;
   background-color: #18181D;
   display: flex;
   flex-direction: column;
-  display: none;
 }
 .select-container .sc-inner {
-  margin: 40px 16px;
+  position: relative;
+  height: 100%;
+  display: grid;
+  gap: 40px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  overflow-y: scroll;
+}
+.select-container .sc-inner .btn-group {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 99999999;
+  width: 100%;
+  height: 82px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  background: hsl(240, 10%, 7.6%);
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+.select-container .sc-inner .btn-group button {
+  display: grid;
+  place-items: center;
+}
+.select-container .sc-inner .btn-group button.active {
+  background: #FFA600;
+  border-radius: 6px;
+}
+.select-container .sc-inner .btn-group button.active img {
+  filter: invert(1);
 }
 .select-container .select {
   width: 100%;
-  padding-bottom: 132px;
-  overflow-y: scroll;
 }
 .select-container .select .armor-list {
   list-style-type: none;
-  padding: 0;
+  padding: 16px;
   width: inherit;
   height: inherit;
   display: flex;
@@ -194,9 +224,9 @@ main {
   overflow: hidden;
   width: inherit;
   display: grid;
-  grid-template-rows: 120px;
-  grid-template-columns: auto 1fr;
+  grid-template: 150px/99px 1fr;
   align-items: center;
+  gap: 32px;
   background-color: #141419;
   border-radius: 16px;
 }
@@ -217,52 +247,6 @@ main {
 .select-container .select .armor-list .an-armor .img-container img {
   height: 100%;
 }
-.select-container .select .armor-list .an-armor .txt-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  padding: 20px 16px;
-  color: rgb(138.75, 138.75, 138.75);
-}
-.select-container .select .armor-list .an-armor .txt-container .armor-name {
-  font-size: 20px;
-}
-.select-container .select .armor-list .an-armor .txt-container .weight-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-between;
-  font-family: "Ubuntu Mono", monospace;
-  color: rgb(138.75, 138.75, 138.75);
-}
-.select-container .menu-options {
-  position: absolute;
-  bottom: 40px;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 8px;
-}
-.select-container .menu-options .btn-group {
-  display: grid;
-  grid-template: 55px/repeat(4, 55px);
-  overflow: hidden;
-  position: relative;
-  border-radius: 12px;
-  background-color: black;
-}
-.select-container .menu-options .btn-group button {
-  margin: 7.5px;
-  display: grid;
-  place-items: center;
-  z-index: 2;
-  color: #e4e4e4;
-  border-radius: 6px;
-}
-.select-container .menu-options .btn-group button.active {
-  background-color: #FFA600;
-}
-.select-container .menu-options .btn-group button:hover {
-  background-color: rgb(56, 56, 56);
+.select-container .select .armor-list .an-armor .armor-name {
+  font-size: 24px;
 }/*# sourceMappingURL=style.css.map */
