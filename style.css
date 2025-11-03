@@ -14,6 +14,7 @@ body {
   width: calc(100vw - (100vw - 100%));
   font-family: "Josefin Sans", sans-serif;
   background-color: #18181D;
+  overflow: hidden;
 }
 
 main {
@@ -167,7 +168,7 @@ main {
   left: 0;
   z-index: 999999;
   width: calc(100vw - (100vw - 100%));
-  height: 100vh;
+  height: 100%;
   padding: 92px 0 0 0;
   background-color: #18181D;
   display: flex;
