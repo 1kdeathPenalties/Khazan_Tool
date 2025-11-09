@@ -28,11 +28,11 @@
      <link rel='stylesheet' href='style.css'>
 </head>
 
-<body>
+<body id="app">
      <main>
           <header class="head-bar">
                <h1>Khazan Armory</h1>
-               <div class="hamburger">X</div>
+               <div id="menu" class="hamburger">X</div>
 
                <!-- <nav></nav> -->
           </header>
@@ -41,7 +41,7 @@
                <p class="pg-about">Legendary Sets</p>
                
                <div class="content-inner">
-                    <div class="select-container">
+                    <div id="modal" class="select-container modal-closed">
                          <div class="sc-inner">
                               <div class="btn-group">
                                    <button class="active"><img src="./Assets/SVGs/DW Icon.svg" alt="A dual wield icon - an axe and sword forming a crossbone."></button>
@@ -51,8 +51,8 @@
                               </div>
 
                               <div class="select">
-                                   <ul class="armor-list">
-                                        <li class="an-armor active">
+                                   <ul id="armor-list" class="armor-list">
+                                        <!-- <li class="an-armor active">
                                              <div class="img-container">
                                                   <img src="./Assets/Imgs/Armors/Dual Wield/Beastslayer.jpg" alt="Image of an armor named Beastslayer">
                                              </div>
@@ -120,7 +120,7 @@
                                                   <img src="./Assets/Imgs/Armors/Dual Wield/Warrior.jpg" alt="Image of an armor named Beastslayer">
                                              </div>
                                              <div class="armor-name">Warrior</div>     
-                                        </li>
+                                        </li> -->
                                    </ul>
                               </div>
                          </div>
@@ -393,8 +393,7 @@
           </section>
      </main>
 
-     <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
-     <script src='script.js'></script>
+     <script src='https://code.jquery.com/jquery-3.7.1.js'></script>
+     <script src='./script.js' type="module"></script>
 </body>
-
 </html>

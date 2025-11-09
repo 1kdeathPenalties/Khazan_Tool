@@ -12,10 +12,14 @@ button {
 
 body {
   width: calc(100vw - (100vw - 100%));
-  overflow-y: scroll;
   height: 100dvh;
+  overflow-y: scroll;
   font-family: "Josefin Sans", sans-serif;
   background-color: #18181D;
+}
+body.modal-open {
+  position: fixed;
+  overflow-y: hidden;
 }
 
 main {
@@ -174,7 +178,9 @@ main {
   background-color: #18181D;
   display: flex;
   flex-direction: column;
-  display: none;
+}
+.select-container.modal-closed {
+  visibility: hidden;
 }
 .select-container .sc-inner {
   position: relative;
