@@ -7,7 +7,7 @@
                     {
                          "name": "Beastslayer",
                          "numOfPieces": 6,
-                         "totalWeight": 23.3,
+                         "totalWeight": 18.3,
                          "weightClass": "Lightweight",
                          "setPieces": [
                               {
@@ -154,8 +154,8 @@
                                    "value": 15.0
                               },
                               {
-                                   "attrDesc": "[Whirlwind]: DMG Increase for 15s (max: 20 stacks)",
-                                   "attrDescCont": null,
+                                   "attrDesc": "[Whirlwind]: DMG Increase for 15s",
+                                   "attrDescCont": "(max: 20 stacks)",
                                    "hasValue": true,
                                    "valueIsPercent": true,
                                    "value": 1.0
