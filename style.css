@@ -48,7 +48,11 @@ main {
   border: 2px solid #DD7600;
   display: grid;
   place-items: center;
-  font-size: 30px;
+  color: black;
+  font-size: 24px;
+}
+.head-bar .hamburger .hamburger-icon.hidden {
+  display: none;
 }
 
 #content {
@@ -213,6 +217,7 @@ main {
 .select-container .sc-inner .btn-group button.active {
   background: #FFA600;
   border-radius: 6px;
+  color: hsl(0, 0%, 0%);
 }
 .select-container .sc-inner .btn-group button.active img {
   filter: invert(1);
@@ -257,5 +262,6 @@ main {
   height: 100%;
 }
 .select-container .select .armor-list .an-armor .armor-name {
-  font-size: 28px;
+  margin-right: 12px;
+  font-size: 24px;
 }/*# sourceMappingURL=style.css.map */

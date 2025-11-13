@@ -25,6 +25,7 @@
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
      <link rel='stylesheet' href='style.css'>
 </head>
 
@@ -32,7 +33,9 @@
      <main>
           <header class="head-bar">
                <h1>Khazan Armory</h1>
-               <div id="menu" class="hamburger">X</div>
+               <div id="menu" class="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+               </div>
 
                <!-- <nav></nav> -->
           </header>
@@ -44,16 +47,14 @@
                     <div id="modal" class="select-container modal-closed">
                          <div class="sc-inner">
                               <div class="btn-group">
-                                   <button class="active"><img src="./Assets/SVGs/DW Icon.svg" alt="A dual wield icon - an axe and sword forming a crossbone."></button>
-                                   <button><img src="./Assets/SVGs/GS Icon.svg" alt="A greatsword icon."></button>
-                                   <button><img src="./Assets/SVGs/Spear Icon.svg" alt="A spear icon."></button>
-                                   <button>Misc</button>
+                                   <button class="select-options active" data-weapon="dw"><img src="./Assets/SVGs/DW Icon.svg" alt="A dual wield icon - an axe and sword forming a crossbone."></button>
+                                   <button class="select-options" data-weapon="gs"><img src="./Assets/SVGs/GS Icon.svg" alt="A greatsword icon."></button>
+                                   <button class="select-options" data-weapon="spear"><img src="./Assets/SVGs/Spear Icon.svg" alt="A spear icon."></button>
+                                   <button class="select-options" data-weapon="misc">Misc</button>
                               </div>
 
-                              <div class="select">
-                                   <ul id="armor-list" class="armor-list">
+                              <div id="select" class="select">
                                    
-                                   </ul>
                               </div>
                          </div>
                     </div>
